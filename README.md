@@ -1,0 +1,1 @@
+easy-bank-msa-maven을 gradle 형태로 추가 개발 중
