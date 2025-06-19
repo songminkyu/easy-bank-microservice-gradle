@@ -3,4 +3,5 @@ rootProject.name = 'easy-bank-msa'
 include 'apps'
 include 'apps:accounts'
 include 'apps:loans'
+include 'apps:cards'
 
