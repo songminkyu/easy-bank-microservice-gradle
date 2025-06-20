@@ -1,2 +1,23 @@
 dependencies {
+    implementation project(':apps:eazy-bom:common')
+
+    // OpenTelemetry
+    runtimeOnly "io.opentelemetry.javaagent:opentelemetry-javaagent:${rootProject.ext.otelVersion}"
+
+    // Micrometer
+    implementation "io.micrometer:micrometer-registry-prometheus:${rootProject.ext.micrometerVersion}"
+
+    // Spring Cloud
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    implementation 'org.springframework.cloud:spring-cloud-stream'
+    implementation 'org.springframework.cloud:spring-cloud-stream-binder-kafka'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${rootProject.ext.springCloudVersion}"
+    }
 }

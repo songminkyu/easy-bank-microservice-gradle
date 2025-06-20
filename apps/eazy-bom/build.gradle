@@ -1,0 +1,24 @@
+ext {
+    commonLibVersion = '1.0.0'
+    springBootVersion = '3.4.5'
+    springCloudVersion = '2024.0.0'
+    springDocVersion = '2.8.1'
+    h2Version = '2.3.232'
+    lombokVersion = '1.18.36'
+    otelVersion = '2.11.0'
+    micrometerVersion = '1.14.2'
+    jibVersion = '3.4.2'
+    imageTag = 's20'
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+dependencies {
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}

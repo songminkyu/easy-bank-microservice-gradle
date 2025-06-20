@@ -7,6 +7,18 @@ plugins {
 group = 'esay-bank-msa'
 version = '0.0.1-SNAPSHOT'
 
+ext {
+    springBootVersion = '3.4.5'
+    springCloudVersion = '2024.0.0'
+    springDocVersion = '2.8.1'
+    h2Version = '2.3.232'
+    lombokVersion = '1.18.36'
+    otelVersion = '2.11.0'
+    micrometerVersion = '1.14.2'
+    jibVersion = '3.4.2'
+    imageTag = 's20'
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
@@ -36,11 +48,11 @@ allprojects {
 		implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 		implementation 'org.springframework.boot:spring-boot-starter-validation'
 		implementation 'org.springframework.boot:spring-boot-starter-web'
-		implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.8'
-		compileOnly 'org.projectlombok:lombok'
+		implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${springDocVersion}"
+		compileOnly "org.projectlombok:lombok:${lombokVersion}"
 		developmentOnly 'org.springframework.boot:spring-boot-devtools'
-		runtimeOnly 'com.h2database:h2'
-		annotationProcessor 'org.projectlombok:lombok'
+		runtimeOnly "com.h2database:h2:${h2Version}"
+		annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
 		testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	}
@@ -49,4 +61,3 @@ allprojects {
 		useJUnitPlatform()
 	}
 }
-

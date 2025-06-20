@@ -1,4 +1,5 @@
 package com.easybank.accounts.dto;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
@@ -21,7 +22,7 @@ public class CustomerDto {
     private String name;
 
     @Schema(
-            description = "Email address of the customer", example = "tutor@eazybytes.com"
+            description = "Email address of the customer", example = "tutor@easybank.com"
     )
     @NotEmpty(message = "Email address can not be a null or empty")
     @Email(message = "Email address should be a valid value")

@@ -1,0 +1,16 @@
+version = rootProject.ext.find('commonLibVersion') ?: '1.0.0'
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly "org.projectlombok:lombok:${rootProject.ext.lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${rootProject.ext.lombokVersion}"
+    implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${rootProject.ext.springDocVersion}"
+}

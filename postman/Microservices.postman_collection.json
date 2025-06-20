@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@easybank\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -71,7 +71,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Mohan\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\",\n    \"accountsDto\": {\n        \"accountNumber\": 1105557729,\n        \"accountType\": \"Savings\",\n        \"branchAddress\": \"123 Main Street, New York\"\n    }\n}",
+							"raw": "{\n    \"name\": \"Madan Mohan\",\n    \"email\": \"tutor@easybank\",\n    \"mobileNumber\": \"4354437687\",\n    \"accountsDto\": {\n        \"accountNumber\": 1105557729,\n        \"accountType\": \"Savings\",\n        \"branchAddress\": \"123 Main Street, New York\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -849,7 +849,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes.com\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@easybank.com\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -916,7 +916,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes.com\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@easybank.com\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -975,7 +975,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@easybank\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1311,7 +1311,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@easybank\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1387,7 +1387,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437688\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@easybank\",\n    \"mobileNumber\": \"4354437688\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1643,7 +1643,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@easybank\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1912,7 +1912,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"accountNumber\": 1234545454,\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"accountNumber\": 1234545454,\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@easybank\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1940,7 +1940,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"accountNumber\": 1234545454,\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"accountNumber\": 1234545454,\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@easybank\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1968,7 +1968,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"accountNumber\": 1234545454,\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@eazybytes\",\n    \"mobileNumber\": \"4354437687\"\n}",
+							"raw": "{\n    \"accountNumber\": 1234545454,\n    \"name\": \"Madan Reddy\",\n    \"email\": \"tutor@easybank\",\n    \"mobileNumber\": \"4354437687\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"

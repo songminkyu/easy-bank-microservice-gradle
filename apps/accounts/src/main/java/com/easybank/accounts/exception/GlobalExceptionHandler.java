@@ -1,6 +1,6 @@
 package com.easybank.accounts.exception;
 
-import com.easybank.accounts.dto.ErrorResponseDto;
+import com.easybank.common.dto.ErrorResponseDto;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
