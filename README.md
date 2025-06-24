@@ -14,7 +14,7 @@ The application follows a microservices architecture pattern with the following 
 
 ## Technology Stack
 
-- **Java**: Version 17
+- **Java**: Version 21
 - **Spring Boot**: Version 3.4.5
 - **Spring Cloud**: Version 2024.0.0
 - **Database**: H2 (for development)
