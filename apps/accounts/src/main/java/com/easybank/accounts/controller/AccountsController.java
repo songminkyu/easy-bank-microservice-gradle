@@ -57,6 +57,13 @@ public class AccountsController {
     @Autowired
     private AccountsContactInfoDto accountsContactInfoDto;
 
+
+    @GetMapping("/test")
+    public String test() {
+        iAccountsService.test();
+        return "test";
+    }
+
     @Operation(
             summary = "Create Account REST API",
             description = "REST API to create new Customer &  Account inside EazyBank"

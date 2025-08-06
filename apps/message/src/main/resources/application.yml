@@ -3,18 +3,137 @@ server:
 
 spring:
   application:
-    name: "message"
+    name: message
+  main:
+    allow-bean-definition-overriding: true
+  output:
+    ansi:
+      enabled: always
   cloud:
     function:
-      definition: email|sms
+      definition: email|sms;handleDltMessage
     stream:
+      default:
+        contentType: application/json
       bindings:
         emailsms-in-0:
           destination: send-communication
           group: ${spring.application.name}
+          consumer:
+            maxAttempts: 1
+            backOffInitialInterval: 1000
+            backOffMaxInterval: 5000
+            backOffMultiplier: 2.0
         emailsms-out-0:
           destination: communication-sent
+        handleDltMessage-in-0:
+          destination: send-communication.message.dlq
+          group: ${spring.application.name}-dlq
+          contentType: application/json
       kafka:
+        bindings:
+          emailsms-in-0:
+            consumer:
+              enableDlq: true
+              dlqName: send-communication.message.dlq
+              ack-mode: MANUAL
+              resetOffsets: false
         binder:
-          brokers:
-            - localhost:9092
+          brokers: localhost:9092
+          autoCreateTopics: true
+          autoAddPartitions: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    connection-timeout: 10s
+  kafka:
+    bootstrap-servers: http://localhost:9092
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+        message.dlt.processing.time: true
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+
+logging:
+  level:
+    ROOT: INFO
+    com.easybank.message: INFO
+    org.springframework.cloud.stream: DEBUG
+    org.apache.kafka: INFO
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+
+# DLT Processing Configuration
+app:
+  dlt:
+    critical-account:
+      account-threshold: 1000000000  # 10억 이상 계좌
+      immediate-escalation: true
+      require-manual-intervention: true
+    retry-strategy:
+      max-dlt-retry-attempts: 2
+      base-retry-delay-ms: 30000  # 30초
+      backoff-multiplier: 2.0
+      max-retry-delay-ms: 300000  # 5분
+      transient-error-types:
+        - "ConnectException"
+        - "SocketTimeoutException"
+        - "TimeoutException"
+        - "ServiceUnavailableException"
+        - "TemporaryFailureException"
+        - "CircuitBreakerOpenException"
+        - "HttpServerErrorException"
+        - "ResourceAccessException"
+    alert-config:
+      escalation-attempt-threshold: 5
+      pager-duty-enabled: false
+      slack-webhook-url: "${SLACK_WEBHOOK_URL:}"
+      email-recipients:
+        critical:
+          - "ops-team@company.com"
+          - "on-call@company.com"
+        standard:
+          - "dev-team@company.com"
+      jira-project-key: "OPS"
+    permanent-error:
+      permanent-error-types:
+        - "IllegalArgumentException"
+        - "ValidationException"
+        - "DataIntegrityViolationException"
+        - "AuthenticationException"
+        - "AuthorizationException"
+        - "BadRequestException"
+        - "SecurityException"
+        - "UnsupportedOperationException"
+        - "JsonProcessingException"
+      permanent-error-messages:
+        - "cannot be null"
+        - "invalid format"
+        - "validation failed"
+        - "unauthorized"
+        - "forbidden"
+        - "malformed"
+        - "corrupt"
+        - "invalid data"
+      archive-failures: true

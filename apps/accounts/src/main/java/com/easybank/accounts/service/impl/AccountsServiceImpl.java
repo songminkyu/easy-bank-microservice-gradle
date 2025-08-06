@@ -33,6 +33,15 @@ public class AccountsServiceImpl  implements IAccountsService {
     private CustomerRepository customerRepository;
     private final StreamBridge streamBridge;
 
+    @Override
+    public void test()
+    {
+        var accountsMsgDTO = new AccountsMsgDto(123123L, "pasongsoso",
+                "test@naver.com","040440");
+        log.info("Sending Communication request for the details: {}", accountsMsgDTO);
+        var result = streamBridge.send("sendCommunication-out-0", accountsMsgDTO);
+        log.info("Is the Communication request successfully triggered ? : {}", result);
+    }
     /**
      * @param customerDto - CustomerDto Object
      */
