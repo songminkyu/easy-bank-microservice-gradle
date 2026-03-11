@@ -1,4 +1,4 @@
-package com.easybank.common;
+package com.eazybytes.common;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

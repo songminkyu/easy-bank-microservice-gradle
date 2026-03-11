@@ -1,9 +1,9 @@
-package com.easybank.accounts.controller;
+package com.eazybytes.accounts.controller;
 
-import com.easybank.accounts.constants.AccountsConstants;
-import com.easybank.accounts.dto.AccountsDto;
-import com.easybank.accounts.dto.CustomerDto;
-import com.easybank.accounts.dto.ResponseDto;
+import com.eazybytes.accounts.constants.AccountsConstants;
+import com.eazybytes.accounts.dto.AccountsDto;
+import com.eazybytes.accounts.dto.CustomerDto;
+import com.eazybytes.accounts.dto.ResponseDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;

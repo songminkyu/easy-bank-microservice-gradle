@@ -1,10 +1,10 @@
-package com.easybank.accounts;
+package com.eazybytes.gatewayserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AccountsApplicationTests {
+class GatewayserverApplicationTests {
 
 	@Test
 	void contextLoads() {
