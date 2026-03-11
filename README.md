@@ -21,6 +21,7 @@ The application follows a microservices architecture pattern with the following 
 - **API Documentation**: SpringDoc OpenAPI
 - **Build Tool**: Gradle
 - **Containerization**: Docker with JIB
+- **docker-compose**: docker Compose add
 - **Orchestration**: Kubernetes with Helm charts
 - **Monitoring**: Grafana, Prometheus, Loki, Tempo
 
