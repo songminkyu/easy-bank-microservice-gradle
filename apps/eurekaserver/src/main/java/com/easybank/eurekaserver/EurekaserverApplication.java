@@ -1,4 +1,4 @@
-package com.easybank.eurekaserver;
+package com.eazybytes.eurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
