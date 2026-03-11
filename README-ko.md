@@ -21,6 +21,7 @@
 - **API 문서화**: SpringDoc OpenAPI
 - **빌드 도구**: Gradle
 - **컨테이너화**: Docker with JIB
+- **도커컴포즈**: 도커 컴포즈 추가
 - **오케스트레이션**: Kubernetes with Helm charts
 - **모니터링**: Grafana, Prometheus, Loki, Tempo
 
