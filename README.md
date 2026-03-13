@@ -157,17 +157,26 @@ easy-bank-msa/
 │   ├── gatewayserver/    # API Gateway
 │   ├── loans/            # Loans microservice
 │   └── message/          # Notification service
-├── helm/                 # Kubernetes Helm charts
-│   ├── eazybank-common/  # Common infrastructure
-│   ├── eazybank-services/# Microservices deployment
-│   ├── environments/     # Environment-specific configurations
-│   ├── grafana/          # Monitoring dashboards
-│   ├── grafana-loki/     # Log aggregation
-│   ├── grafana-tempo/    # Distributed tracing
-│   ├── kafka/            # Event streaming platform
-│   ├── keycloak/         # Identity and access management
-│   └── kube-prometheus/  # Monitoring and alerting
-└── kubernetes/           # Kubernetes manifests
+├── postman/              # Postman collection for API testing
+└── k8s/                  # Deployment and Infrastructure configurations
+    ├── docker-compose/   # Docker compose files for various environments
+    │   ├── default/      # Default compose environment
+    │   ├── observability/# Monitoring and tracing stack
+    │   ├── prod/         # Production compose environment
+    │   └── qa/           # QA compose environment
+    ├── helm/             # Kubernetes Helm charts (legacy)
+    ├── helm-new/         # Kubernetes Helm charts (new)
+    │   ├── eazybank-common/  # Common infrastructure
+    │   ├── eazybank-services/# Microservices deployment
+    │   ├── environments/     # Environment-specific configurations
+    │   ├── grafana/          # Monitoring dashboards
+    │   ├── grafana-alloy/    # Grafana Alloy collector
+    │   ├── grafana-loki/     # Log aggregation
+    │   ├── grafana-tempo/    # Distributed tracing
+    │   ├── kafka/            # Event streaming platform
+    │   ├── keycloak/         # Identity and access management
+    │   └── kube-prometheus/  # Monitoring and alerting
+    └── kubernetes/       # Kubernetes manifests
 ```
 
 ## Contributing
