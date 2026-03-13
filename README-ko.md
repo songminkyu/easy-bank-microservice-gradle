@@ -157,17 +157,26 @@ easy-bank-msa/
 │   ├── gatewayserver/    # API 게이트웨이
 │   ├── loans/            # 대출 마이크로서비스
 │   └── message/          # 알림 서비스
-├── helm/                 # Kubernetes Helm 차트
-│   ├── eazybank-common/  # 공통 인프라
-│   ├── eazybank-services/# 마이크로서비스 배포
-│   ├── environments/     # 환경별 구성
-│   ├── grafana/          # 모니터링 대시보드
-│   ├── grafana-loki/     # 로그 집계
-│   ├── grafana-tempo/    # 분산 추적
-│   ├── kafka/            # 이벤트 스트리밍 플랫폼
-│   ├── keycloak/         # 신원 및 접근 관리
-│   └── kube-prometheus/  # 모니터링 및 경고
-└── kubernetes/           # Kubernetes 매니페스트
+├── postman/              # API 테스트를 위한 Postman 컬렉션
+└── k8s/                  # 배포 및 인프라 구성
+    ├── docker-compose/   # 환경별 도커 컴포즈 파일
+    │   ├── default/      # 기본 컴포즈 환경
+    │   ├── observability/# 모니터링 및 추적 스택
+    │   ├── prod/         # 운영 컴포즈 환경
+    │   └── qa/           # QA 컴포즈 환경
+    ├── helm/             # Kubernetes Helm 차트 (기전)
+    ├── helm-new/         # Kubernetes Helm 차트 (신규)
+    │   ├── eazybank-common/  # 공통 인프라
+    │   ├── eazybank-services/# 마이크로서비스 배포
+    │   ├── environments/     # 환경별 구성
+    │   ├── grafana/          # 모니터링 대시보드
+    │   ├── grafana-alloy/    # Grafana Alloy 수집기
+    │   ├── grafana-loki/     # 로그 집계
+    │   ├── grafana-tempo/    # 분산 추적
+    │   ├── kafka/            # 이벤트 스트리밍 플랫폼
+    │   ├── keycloak/         # 신원 및 접근 관리
+    │   └── kube-prometheus/  # 모니터링 및 경고
+    └── kubernetes/       # Kubernetes 매니페스트
 ```
 
 ## 기여
